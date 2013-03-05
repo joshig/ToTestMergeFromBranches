@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Property based Injection-->
+<!--<objects xmlns="http://www.springframework.net">
+    <object type="JQueryDataTables.Controllers.HomeController, JQueryDataTables" singleton="false" id="Home">
+        <property name="_companyService" ref="CompanyService"/>
+    </object>
+    <object type="JQueryDataTables.Controllers.CompanyController, JQueryDataTables" singleton="false" id="Company">
+        <property name="_companyService" ref="CompanyService"/>
+    </object>
+    <object type="JQueryDataTables.Services.CompanyService, JQueryDataTables" singleton="false" id="CompanyService">
+        <property name="_companyRepository" ref="CompanyRepository"/>
+    </object>
+    <object type="JQueryDataTables.Models.Repository.CompanyRepository, JQueryDataTables" singleton="false" id="CompanyRepository">
+    </object>
+</objects>-->
+
+<!-- Constructor based injections-->
+<objects xmlns="http://www.springframework.net">
+    <object type="JQueryDataTables.Controllers.HomeController, JQueryDataTables" singleton="false" id="Home">
+        <constructor-arg ref="CompanyService"/>
+    </object>
+    <object type="JQueryDataTables.Controllers.CompanyController, JQueryDataTables" singleton="false" id="Company">
+        <constructor-arg ref="CompanyService"/>
+    </object>
+    <object type="JQueryDataTables.Services.CompanyService, JQueryDataTables" singleton="false" id="CompanyService">
+        <constructor-arg ref="CompanyRepository"/>
+    </object>
+    <object type="JQueryDataTables.Models.Repository.CompanyRepository, JQueryDataTables" singleton="false" id="CompanyRepository">
+    </object>
+</objects>

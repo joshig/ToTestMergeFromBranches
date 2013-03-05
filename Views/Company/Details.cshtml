@@ -1,0 +1,15 @@
+﻿@model JQueryDataTables.Models.Company
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div>
+    <div>ID :  @Model.ID</div>
+    <div>Name : @Model.Name</div>
+    <div>Town : @Model.Town</div>
+    <div>Address :@Model.Address</div>
+    <br /><br />
+
+    @Html.ActionLink("Back to Home","Index","Home")
+</div>
