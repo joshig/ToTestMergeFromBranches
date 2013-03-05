@@ -23,7 +23,8 @@ namespace JQueryDataTables.Controllers
             _companyService = companyService;
         }
 
-        public ActionResult Index()
+        //This is a change from branch 1 user
+	public ActionResult Index()
         {
             return View();
         }
